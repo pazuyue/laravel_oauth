@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/auth/callback', function (\Illuminate\Http\Request $request){
+    if ($request->get('code')) {
+        return 'Login Success';
+    } else {
+        return 'Access Denied';
+    }
+});

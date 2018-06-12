@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
-
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <script src="{{ asset('js/app.js') }}"></script>
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <!-- Styles -->
         <style>
             html, body {
@@ -65,6 +65,15 @@
         </style>
     </head>
     <body>
+    <passport-clients></passport-clients>
+    <passport-authorized-clients></passport-authorized-clients>
+    <passport-personal-access-tokens></passport-personal-access-tokens>
+    <script>
+        axios.get('/oauth/clients')
+            .then(response => {
+            console.log(response.data);
+        });
+    </script>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
