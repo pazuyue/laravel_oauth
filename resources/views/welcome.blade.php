@@ -69,9 +69,17 @@
     <passport-authorized-clients></passport-authorized-clients>
     <passport-personal-access-tokens></passport-personal-access-tokens>
     <script>
-        axios.get('/oauth/clients')
+        const data = {
+            name: '月光',
+            redirect: 'http://www.laraver.com'
+        };
+
+        axios.post('/oauth/clients', data)
             .then(response => {
             console.log(response.data);
+        })
+        .catch (response => {
+            // List errors on response...
         });
     </script>
         <div class="flex-center position-ref full-height">

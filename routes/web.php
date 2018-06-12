@@ -23,3 +23,11 @@ Route::get('/auth/callback', function (\Illuminate\Http\Request $request){
         return 'Access Denied';
     }
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

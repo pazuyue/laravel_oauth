@@ -19,8 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/redirect', function (){
     $query = http_build_query([
-        'client_id' => '1',
-        'redirect_uri' => 'http://www.laraver.com/auth/callback',
+        'client_id' => '5',
+        'redirect_uri' => 'http://www.laraver.com',
         'response_type' => 'code',
         'scope' => '',
     ]);
