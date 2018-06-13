@@ -11,4 +11,4 @@
 
 ####框架的运行测试：
 #####第一步：执行welcome.blade.php视图，该视图有个js的方法会创建一个客户端客户端的 name 和 redirect URL， redirect URL 是用户授权请求通过或拒绝后重定向到的位置。
-#####第二步：/api/redirect 调用授权路径授权
+#####第二步：/api/redirect
