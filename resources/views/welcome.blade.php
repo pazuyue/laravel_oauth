@@ -73,7 +73,7 @@
         <script>
 
 
-            axios.get('api/user')
+            axios.get('/user')
                 .then(response => {
                     console.log(response.data);
                 });
