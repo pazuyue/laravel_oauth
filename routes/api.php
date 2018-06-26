@@ -13,20 +13,20 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api','scope:get-userinfo')->get('/user', function (Request $request) {
+Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
 Route::get('/redirect', function (){
     $query = http_build_query([
-        'client_id' => '5',
+        'client_id' => '1',
         'redirect_uri' => 'http://www.laraver.com/auth/callback',
         'response_type' => 'code',
-        'scope' => 'get-userinfo',
+        'scope' => '',
     ]);
 
 
-    return redirect('http://www.laraver.com/oauth/authorize?' . $query);
+    return redirect('http://193.112.109.76/oauth/authorize?' . $query);
 });
 
 
